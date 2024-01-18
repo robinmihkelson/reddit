@@ -31,7 +31,7 @@ commonWords = {'ja','aga','ei','ok','kas','mina','millal','kuidas','that','this'
 }
 
 
-for submission in subreddit.top(limit=500):
+for submission in subreddit.hot(limit=100):
     submission.comments.replace_more(limit=0)
     for top_level_comment in submission.comments:
         count += 1
